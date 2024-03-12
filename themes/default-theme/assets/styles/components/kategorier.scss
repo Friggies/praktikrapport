@@ -1,0 +1,18 @@
+.kategorier{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    &__kategori{
+        background-color: var(--clr-gray);
+        padding: 0.5rem 1rem;
+        display: inline-block;
+        border-radius: 1rem;
+    }
+}
+@media screen and (max-width:600px) {
+    .kategorier{
+        margin-bottom: 2rem;
+    }
+}

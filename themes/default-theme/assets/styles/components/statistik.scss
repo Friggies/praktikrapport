@@ -1,0 +1,32 @@
+.statistik{
+    margin-left: 0 !important; //override list styling from content
+    margin-bottom: -1rem;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-between;
+    gap: 2rem;
+    &__kolonne{
+        margin-bottom: 0 !important; //override list styling from content
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: var(--clr-gray);
+        padding-block: 2rem;
+        flex: 1;
+    }
+    &__nummer{
+        font-size: xx-large;
+        color: var(--clr-pink);
+        font-weight: bolder;
+        margin-bottom: 0 !important; //override list styling from content
+    }
+}
+@media screen and (max-width:600px) {
+    .statistik{
+        margin-top: 2rem;
+        flex-direction: column;
+    }
+}

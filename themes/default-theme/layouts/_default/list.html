@@ -1,0 +1,38 @@
+{{ define "main" }}
+  <section class="section section--hero">
+    <div class="section__content">
+      <h1>{{ if .IsHome }}<a href="https://helloretail.com" target="_blank">Hello Retail</a> Praktikrapport{{ else }}{{ .Title }}{{ end }}</h1>
+      <div>{{ .Content }}</div>
+      {{ if eq .Kind "term"}}
+        <a href="/kategorier">Se alle kategorier</a>
+      {{ end }}  
+    </div>
+  </section>
+  <section class="section">
+    <div class="section__content">
+      {{ if .IsHome }}
+      <div class="kategorier">
+        {{range ($.Site.GetPage "taxonomyTerm" "kategorier").Pages }}
+          <a href="{{.Permalink}}" class="kategorier__kategori">{{.Title}}</a></li>
+      {{end}}
+      </div>
+      {{ end }}
+      <div class="cards">
+        {{ range (where .Pages ".Type" "ne" "page").ByWeight }}
+        <div class="cards__card">
+          <h2>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </h2>
+          {{ if eq (substr .Summary 0 7) "Opgaven" }}
+            {{ substr .Summary 8 }}
+          {{ else if eq (substr .Summary 0 8) "Hvorfor?" }}
+            {{ substr .Summary 9 }}
+          {{ else }}
+            {{ .Summary }}
+          {{ end }}
+        </div>
+      {{ end }}
+      </div>
+    </div>
+  </section>
+{{ end }}

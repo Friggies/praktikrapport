@@ -1,0 +1,17 @@
+@media (prefers-color-scheme: light) {
+    :root{
+        --clr-white: #ffffff;
+        --clr-black: #000000;
+        --clr-gray: #ebeff5;
+        --clr-pink: #ee268c;
+    }    
+}
+
+@media (prefers-color-scheme: dark) {
+    :root{
+        --clr-white: #232323;
+        --clr-black: #ffffff;
+        --clr-gray: #313b4b;
+        --clr-pink: #ee268c;
+    }    
+}

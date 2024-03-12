@@ -1,0 +1,16 @@
+.skip-link {
+    position: fixed;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    color: black;
+    text-decoration: none;
+    text-transform: none  ;
+    padding: 10px;
+    display: inline-block;
+    transition: 200ms;
+    &:focus {
+      top: 0;
+    }
+}  

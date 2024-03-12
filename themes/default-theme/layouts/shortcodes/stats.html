@@ -1,0 +1,23 @@
+{{ $custommers := 0}}
+{{ range where .Site.RegularPages ".Type" "task" }}
+  {{ if (not (in .Params.kategorier "introduktion")) }}
+    {{ $custommers = add $custommers 1}}
+  {{ end }}
+{{ end }}
+{{ $meetings := 30 }}
+{{ $days := 60 }}
+
+<ul class="statistik" aria-label="Statistik for praktikforløbet">
+    <li class="statistik__kolonne">
+        <span class="statistik__nummer">{{ $custommers }}</span>
+        Kundeopgaver
+    </li>
+    <li class="statistik__kolonne">
+        <span class="statistik__nummer">{{ $meetings }}</span>
+        Møder
+    </li>
+    <li class="statistik__kolonne">
+        <span class="statistik__nummer">{{ $days }}</span>
+        Arbejdsdage
+    </li>
+</ul>

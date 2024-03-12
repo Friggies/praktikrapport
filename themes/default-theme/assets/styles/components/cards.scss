@@ -1,0 +1,16 @@
+.cards{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    &__card{
+        width: calc(50% - 1rem);
+    }
+}
+@media screen and (max-width:600px) {
+    .cards{
+        flex-direction: column;
+        &__card{
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+baseURL = 'https://praktikrapport.dk'
+languageCode = 'da'
+defaultContentLanguage = 'da'
+title = 'Praktikrapport'
+theme = 'default-theme'
+summaryLength = 30
+
+[taxonomies]
+  kategori = 'kategorier'
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.85.0"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

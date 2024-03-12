@@ -1,0 +1,35 @@
+.tableofcontents{
+    margin-bottom: 2rem;
+    font-size: large;
+    background-color: var(--clr-gray);
+    &__summary{
+        padding: 1rem;
+        border-left: 2px solid transparent;
+        &:focus, &:hover{
+            outline: none;
+            border-color: var(--clr-pink);
+        }
+    }
+    &[open] {
+        .tableofcontents__summary{
+            border-color: var(--clr-pink);
+        }
+    }
+    #TableOfContents{
+        padding: 0 1rem 1rem 1rem;
+        border-left: 2px solid var(--clr-pink);
+        & ol,ul{
+            margin-left: 1.25rem;
+        }
+    }
+}
+@media screen and (max-width:600px) {
+    .tableofcontents{
+        margin-bottom: 0;
+        #TableOfContents{
+            li {
+                padding-block: .6rem;
+            }
+        }
+    }
+}

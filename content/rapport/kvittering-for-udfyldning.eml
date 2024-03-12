@@ -1,0 +1,286 @@
+Delivered-To: [...]@[...].com
+Received: by 2002:a54:3747:0:b0:248:8f58:5268 with SMTP id u7csp717067ect;        Fri,
+ 23 Feb 2024 00:33:18 -0800 (PST)
+Received: from EUR02-VI1-obe.outbound.protection.outlook.com
+ (mail-vi1eur02on20701.outbound.protection.outlook.com.
+ [2a01:111:f403:2607::701])        by mx.google.com with ESMTPS id
+ t8-20020a0560001a4800b0033cd5b032f4si542828wry.473.2024.02.23.00.33.18      
+  for <[...]@[...].com>        (version=TLS1_2
+ cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);        Fri, 23 Feb 2024
+ 00:33:18 -0800 (PST)
+Received: from DB7PR06MB4808.eurprd06.prod.outlook.com (2603:10a6:10:5c::16) by
+ PR3PR06MB6828.eurprd06.prod.outlook.com (2603:10a6:102:2e::18) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7339.10; Fri, 23 Feb
+ 2024 08:33:15 +0000
+Received: from DB7PR06MB4808.eurprd06.prod.outlook.com ([fe80::c64f:9e72:c2d6:abda]) by
+ DB7PR06MB4808.eurprd06.prod.outlook.com ([fe80::c64f:9e72:c2d6:abda%4]) with
+ mapi id 15.20.7292.036; Fri, 23 Feb 2024 08:33:15 +0000
+X-Google-Smtp-Source: AGHT+IE+D18dVwDwGnw++CtoQ7aCnN3xdaY9igElKvjb56OaLfpHk+dneHMnEs2/I3TGh6Lo88Qs
+X-Received: by 2002:a05:600c:a386:b0:412:95fa:a6a9 with SMTP id
+ hn6-20020a05600ca38600b0041295faa6a9mr338588wmb.7.1708677198569;        Fri,
+ 23 Feb 2024 00:33:18 -0800 (PST)
+ARC-Seal: i=2; a=rsa-sha256; t=1708677198; cv=pass;        d=google.com;
+ s=arc-20160816;       
+ b=LGhpI1htfI/lFP+Un1baRDl2OcVPAW3BhaXj8PTfEJIArfYJJ+oon7sTFigJYJJkc7        
+ nPXxZeqmXtakoPJ/fjkKQv7wUa7zRUbgjaURi5wanovKegJtPDLmLKaA98SJR4qb93/B        
+ DFlhKUHqH7neTXuYZQqcwwCExlZYwH9h9cwDjIgEDwW9qqbI5GlYdI/QAfJhaQJ4qOXH        
+ yFkM4/mW5sk2ZzxOaaPi40iDK4OoH4TyY2hKFnlp4imqnjvWCEVHTRN3QMOWvrPsyWxj        
+ KWULfIhnASakZgtGEeDx2rN80BbLzw3QYOr+P/wtSG/l2qnvzNX2VNHUgKvXChkf0HE8        
+ EULQ==
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=iDYtxT8LpnTGpOJcxQ7aNZrx9y57t4vUtYI2WQMuqsSH/ih15dG/owMCdqoeJ8eP2fqidTkNtwVFTSc2oQR0aJUCdoIOu8Nd6mVw3LXUycrTzgxvOu3JLzmh28oWM4Cbx3bDGG8uHn7q3vvNd9BnP+UwkxnnjTjoocPPI1VWjVuat/D34qNL6rRod2pxXBCjXs+OMxsD1SctDGVuccX2q2+uO4FJpRabuhCg1a3gm9qpTmJcIIdAuEWcShE8MHW2Uvnkzk/DC7tT0dKfX1xOYBGJTCLjaFxSzJTYWrWW74mMeWpB9ao9lkQAD5aynIayLMcq8GT8TRPituIvyEY0CQ==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;       
+ h=mime-version:content-language:accept-language:in-reply-to        
+ :references:message-id:date:thread-index:thread-topic:subject:to        
+ :from:dkim-signature;       
+ bh=5rxIAy5MBYi5MnamkxCMuHW6L+yb6PD4Guauq+BRu9c=;       
+ fh=0mEwrvuL1AQK8sEHTy8lnPq4t1iFAOOuM11T2dS9unY=;       
+ b=p+jWFhLckX1YfK4xt9UfDRYXlwzkhcxLfY/dYLsWgUYCFTA/4VIVlZ8YbGxBs5B321        
+ T3LAUVPDuNGcpE5ARSeT3e8jha0KX0OmyGdckNihRpOcRd5uMhltPNBX8s7InyENIaLi        
+ SBDmY7B0VM7SCIz5I6GZ9atg2VrGFhP57LFgO/IjcvMuHIzbgFKqCo65XHb6mFS32oTv        
+ q+0qcHyMdMOg8vUydqfpWVu99hAWMfd+wKyUSf4KEzcMZvQ428u8rMjsqsKNnfdjvnlU        
+ TCBhZ+IfupdcVmm/cMxJK/COUlbs+yO80GT6cRqUMxBnZcVD9Y3OTe7P78kl7vF5ZvG9        
+ TrMQ==;        dara=google.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1; bh=5rxIAy5MBYi5MnamkxCMuHW6L+yb6PD4Guauq+BRu9c=;
+ b=TRmroFw6+TmYecqD896gOjaXpwniYRdA6q3w/9KijWjXiyf7WDrQc5/ABBmWacktZ8UtvvIYQqOiK6Uy7wXcvjuAuqDZSblPBKjp3WpZNR0TdkLiXKL0g/pFSS9e7NyRdKMPWbOGFx0z3q0BT9/1CI0IU7oWkAbFL/vkkKbn7pFAWB/PViY4izqOqWnDRRJ6g3plB5qAxVWrxOVp0E9DH+FhSsMAy+mzPS+jcAIlBKyaIUVJIGcOiFR8fULwvFU+e/PDJMuvEtgm0caI10986XVVNAr2il1/nBuYqEWLdBqGwjoBi2WZBW0anRk/CBBt0oIVFMyDEZ1ZQt9zAenWMA==
+ARC-Authentication-Results: i=2; mx.google.com;       dkim=pass header.i=@[...].com
+ header.s=selector2 header.b="vG/x9LZw";       arc=pass (i=1 spf=pass
+ spfdomain=[...].com dkim=pass dkdomain=[...].com dmarc=pass
+ fromdomain=[...].com);       spf=pass (google.com: domain of
+ [...]@[...].com designates 2a01:111:f403:2607::701 as permitted
+ sender) smtp.mailfrom=[...]@[...].com;       dmarc=pass (p=REJECT
+ sp=REJECT dis=NONE) header.from=[...].com
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass smtp.mailfrom=[...].com; dmarc=pass
+ action=none header.from=[...].com; dkim=pass header.d=[...].com;
+ arc=none
+Return-Path: [...]@[...].com
+Received-SPF: pass (google.com: domain of [...]@[...].com designates
+ 2a01:111:f403:2607::701 as permitted sender)
+ client-ip=2a01:111:f403:2607::701;
+Authentication-Results: dkim=none (message not signed) header.d=none;dmarc=none action=none
+ header.from=[...].com;
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=[...].com; s=selector2;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck; bh=5rxIAy5MBYi5MnamkxCMuHW6L+yb6PD4Guauq+BRu9c=;
+ b=vG/x9LZw7ZhlcYiE6ew5UpgQ/q49u+wkY4/ANke+7ul2Lq5s3pXT3SLtRP7ics2zF61bsiEj9tvbd+OvJKdNcblDD0Oadr8sVvbh0sEedhQBdl0SWDdbqwpR/F5R8jAo2qIxjyy6KAddjxAp8IE6IzQ1gy4/ProUMAL2ga7NWfc=
+To: 
+Subject: Fwd: Kvittering for din praktikevaluering // Reciept for your internship
+ evaluation
+Thread-Topic: Kvittering for din praktikevaluering // Reciept for your internship evaluation
+Thread-Index: AQHaZjK4ddU5czDM4Ee4DiHAzYrw+rEXmXN+
+Date: Fri, 23 Feb 2024 08:33:15 +0000
+Message-ID: <DB7PR06MB4808B7481F7AECCD196675E1CC552@DB7PR06MB4808.eurprd06.prod.outlook.com>
+References: <PAXPR06MB85793E78978FE33BBDD62EF6C3552@PAXPR06MB8579.eurprd06.prod.outlook.com>
+In-Reply-To: <PAXPR06MB85793E78978FE33BBDD62EF6C3552@PAXPR06MB8579.eurprd06.prod.outlook.com>
+Accept-Language: en-US
+Content-Language: da-DK
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: DB7PR06MB4808:EE_|PR3PR06MB6828:EE_
+x-ms-office365-filtering-correlation-id: 10a7a1cb-2091-4ea0-70cb-08dc344a148b
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam: BCL:0;
+x-microsoft-antispam-message-info: bM/CISnAOKeYYrczRDQgZT1BzYCguKaQKpewZhtqe6EvWr0b5yxmF9eVahdbO+QGJdQA3H3IEAT6WW7wIs9FxT44XnjEC3icbg36+MGN9b/Qg7Zpbk2f8VjmSylsTy507yIaEG7BG8JDRxvDXueJ4qcbhN7NYir+9SLWrK5lqK1HdK2B4LgsIe//sRbo3bOnCOZ8HJwaXx30RCUvYBpGHA73PPXMHfcj78BO5KK73qiIBhHxAmq4PChAoV9y59DzgI1T0oM3NXRGAy2+vmcVwgetgNjJmWs1PpN/x0VqI06oxtgpO+HPWA+jHpKtHGCOPrlcNBYfkMF8tCuVKsfzRRpT+xrbP/hEOAqt8kM+VrQ0VMSDuxQPEuiWc/P5WKvfswVj5HAolufiRAzVvv8SmQ9d8metifQWZwELGMMbuj6U874T5xWGLp46ur0STw7pegwLn4ptyiyRjfs+u9ovwWzn6pMqlH5KMEnnnqiskV6RovlRGMkCZ0HzwCQqTqWX7/TviX8RS+hhDVAglpVmrWtBe4q++s2IzUzhs4thTYD7Pgk/DqkVMARoqtGhsuxVZaHCIIlL2urDLQzt1parsdcqmKiWl/BZjl4rgKprESM=
+x-forefront-antispam-report: CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:DB7PR06MB4808.eurprd06.prod.outlook.com;PTR:;CAT:NONE;SFS:(13230031)(38070700009);DIR:OUT;SFP:1102;
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0: =?utf-8?B?R3NIYXFLeDh3bFFSS2xUMjk0TWxBeVVkNXAvcDdnTjQ5c2NhS1lERXVidDc4?=
+ =?utf-8?B?L0hla1dnQTZCT3dnY1JraTRMNEYyY1djSEdhNS9DZEpvYU42aXBCaTM2WWdH?=
+ =?utf-8?B?WjZ1cnRnZVZqUHpKa09SZ3YwakZpZE9mYU5xNDhhQndHTFd6bDdmVTZya0ZO?=
+ =?utf-8?B?czg3cHp5OUtCQ2lCNWFtRU5OMTZGWG1KSjcyYXFvQk8zNURTV3BtRGQzM0pD?=
+ =?utf-8?B?c2I2bFEvaDZSeDdld0RQclh5bUlmVG1vSCtZUkZlMU4yNnFRYW9CTGFOS2Zv?=
+ =?utf-8?B?ZDFrS05weEw4enZ1UTM4bzEySjZYMGFTN2luVGhhK3pjRXBKbW5kWkwvalox?=
+ =?utf-8?B?YWUxdmkyc0hCb2VTemZkUG1IbEVvem4wbkkvQ0RwbEZXY2Uyb1RNdlMxcFBS?=
+ =?utf-8?B?aDJqQXJKUXgwYjVSNXd2TUJLU3hiYmVVSVB6K0lhY2FmRzlkOUlGYVBFYWtG?=
+ =?utf-8?B?TXROanBmYmVwaHVib0t4Wnk1NW5QRm5hcHNkR3VyZzR3a0tqbTd5MU90S0tO?=
+ =?utf-8?B?NDlSY3Z5eEl4M0o4d1F0Qlo2U3N0YU1qREJsV3FPaXZveG9yK01zZXdKQnhz?=
+ =?utf-8?B?R3hPUmlCREFBc3hONmpFSWVNeE9heVF0VjROaWRSL2tjWXVaaWhDUzFwNm1N?=
+ =?utf-8?B?WERpM2JuTDNjeDJnVlV5V0FYWER6K1hmSC90THlQYUlXV0ZTclFnQllPSXVW?=
+ =?utf-8?B?TDIwajRCK1NPOUcrMjZodCtFeWQ3VnpVY3lOWm1MME5mWHJFaEZGZmcwNjd1?=
+ =?utf-8?B?NUcvanQ3eUExSi9CUWx5WVBRNW55eG1Vc1Bkd0pzZVYvOHFiRWxjUVgwU01N?=
+ =?utf-8?B?UnhrRWdoZXEvL1VDTDFGQkpva3pFcHNKcHYrYkZKVjkvQ2V1ZlVxTGlQWll4?=
+ =?utf-8?B?NUp2S1B3VDZRRGt4TC80ZW05NE5BOFoxbnd3US9OTkIwR0FhRi9IQlUxVjRj?=
+ =?utf-8?B?ZnR5RzRmMlQxTWJrcXM5cmdyRzhhR3E3VW5LRXRoVnlXRlhFclJad0FIbkF3?=
+ =?utf-8?B?dENCVU83MTg4UnY0SmQ5SHlsZmRUcmcrbG9Dd2Nxa0JPeWtRM3YrZHlITTI3?=
+ =?utf-8?B?SnJzNVY5L2tEN2V1WG4xYks2VGFZQWRJLzNqK1NRWHFGZzRJdnBMMTR5OEpo?=
+ =?utf-8?B?c2lJcG9ocG9rTm9lNzlRMGU1OTR1M2FWYmZva1RDNUZCQ0paZExrRUYrTTVH?=
+ =?utf-8?B?V2o4d0tQd05XWnJwaTQxRXJVSCtVNnB3WE1va3prNkI4THF1Y1BoZkJuNjNC?=
+ =?utf-8?B?VG84U3Z4aExOeHpWWHFhWWRBTzJJTEVVcDIwbDRZanRrREdJajlOcEx5YTBQ?=
+ =?utf-8?B?bmFNbERIK2dvZjF3bVFYZFJwbWRjY3NSSVJsQjAvWVhpNTB5OGp0Y2w4SGh2?=
+ =?utf-8?B?V3hFRmtCaXVjVDRvdEZSeHpEMjJkaWo0WEZORDlnd3QwbE5EdWxzeTlpWlRr?=
+ =?utf-8?B?cnJhdlBOT29DWHNlRkd1dGhDdGYxcUdqdURhOVZNY25DSC8yS2Z2VFdydEs3?=
+ =?utf-8?B?WVp0anowekQrNVpLYWhtSkF4TkpVSzE4djh4VFpjeG56MTBEK1lQMlJpWml2?=
+ =?utf-8?B?azVrS0FGZllPcW5uY09oSmQ2ZEpHMFhlZVVjZWt0dFl4TnFBL0FocUFaVDhO?=
+ =?utf-8?B?UnlrMDAyazIwSSt6UWpsQTNDY1RaWmlxd2NhMkwyWHlCbkp2UzZ6cjJ3czl2?=
+ =?utf-8?B?eEliTWp3SEJWQVlOM0dMSG00T1N4LzQrbTlPN3piU3FNRW9DZWZlZXRhZGlE?=
+ =?utf-8?B?L1RzQkdBQm1jOUNXTUx1R25ybU9OS0ZIOTNZdkhjL2NZeEZTd21CTWtMYnd2?=
+ =?utf-8?B?ZXQvSlZoZjA1VTR0b2dWemh1UFh3VnNEcmpqK29UcGpPSFBlbFlGR1JBN2xi?=
+ =?utf-8?B?bzBIcUt4MW5FQ1puVVl0RDR5dFNkemlOb2ZHaFRoOXRVaGIzMWJ2d3F5Rko1?=
+ =?utf-8?B?UjBDNjVBemVmM3l6Z0liaXFOYjZHVkM2d0h3eTM3cDdBTkdFeHZ1OG5FUHVU?=
+ =?utf-8?B?L2lydFFRTGZrOTBJenhQNGtqTzF4eWZKWVlldWZCeEd2a0lFZ1BZNDF2bzNi?=
+ =?utf-8?B?MkVsZ0ZUZVM4WjlPNFd1RzAzK3RrUUMzTFI1enZnOVdNcEp6cVdMRjRkV0R1?=
+ =?utf-8?B?bEg3MEtyckxENnZsVWc1cEFWQjBhLzhOa1VhbEl4L0R2dEsvNDZ3WlNzTm96?=
+ =?utf-8?B?ZXc9PQ==?=
+MIME-Version: 1.0
+X-OriginatorOrg: [...].com
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: DB7PR06MB4808.eurprd06.prod.outlook.com
+X-MS-Exchange-CrossTenant-Network-Message-Id: 10a7a1cb-2091-4ea0-70cb-08dc344a148b
+X-MS-Exchange-CrossTenant-originalarrivaltime: 23 Feb 2024 08:33:15.6355 (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 1b29427a-4ed3-4f0e-a3ff-ced1342f64ac
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: wzZcUdj4uxv+JrTMq4nGfp5+zBwmZGiIid5unhIQsI9BoTgJ48SrxUX9O1R+I0naTjH9XzRD4bv0x0zp51r6PRtFQWpVKJCSHDEt/fFz0h8=
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PR3PR06MB6828
+Cc: 
+Bcc: 
+Content-Type: multipart/alternative;
+ boundary="_000_DB7PR06MB4808B7481F7AECCD196675E1CC552DB7PR06MB4808eurp_"
+
+--_000_DB7PR06MB4808B7481F7AECCD196675E1CC552DB7PR06MB4808eurp_
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+
+
+Sendt fra Outlook til iOS<https://aka=2Ems/o0ukef>
+________________________________
+Fra: Praktikaftale Cphbusiness <praktikaftale@cphbusiness=2Edk>
+Sendt: Friday, February 23, 2024 9:31:38 AM
+Til: [=2E=2E=2E] <[=2E=2E=2E]@cphbusiness=2Edk>
+Emne: Kvittering for din praktikevaluering // Reciept for your internship e=
+valuation
+
+
+K=C3=A6re [=2E=2E=2E]
+
+Tak for din evaluering af praktikopholdet hos Hello Retail=2E
+
+Din evaluering er vigtig for os, da den er med til at kvalitetssikre fremti=
+dige praktikforl=C3=B8b=2E
+
+Du skal bruge denne bekr=C3=A6ftelse, n=C3=A5r du skal afleverer din prakti=
+krapport i Wiseflow=2E S=C3=B8rg derfor for at gemme denne bekr=C3=A6ftelse=
+ som PDF, mail eller screen shot=2E
+
+I Wiseflow vil der v=C3=A6re et afkrydsningsfelt, hvor du skal bekr=C3=A6ft=
+e, at du har uploadet denne bekr=C3=A6ftelse for praktikevaluering sammen m=
+ed din praktikrapport=2E
+
+Det er derfor vigtigt, at du gemmer denne bekr=C3=A6ftelse for deltagelse i=
+ evalueringen=2E
+
+Med venlig hilsen
+Cphbusiness
+
+____________
+=F0=9F=87=AC=F0=9F=87=A7
+Dear [=2E=2E=2E]
+
+Thank you for your evaluation of your internship at Hello Retail=2E
+
+Your evaluation is important to us, as it helps to ensure the quality of fu=
+ture internships=2E
+
+You will need this confirmation when you submit your internship report in W=
+iseflow=2E Therefore ensure to save this confirmation as PDF, mail or scree=
+n shot=2E
+
+In Wiseflow, there will be a check box where you need to confirm that you h=
+ave uploaded this internship evaluation confirmation along with your intern=
+ship report=2E
+
+It is therefore important that you save this confirmation of participation =
+in the evaluation=2E
+
+Best regards
+Cphbusiness
+
+
+2024-02-23T08:31:38=2E0422829Z (id:217202e7-db2d-ed11-9db1-000d3a228ce3)
+
+--_000_DB7PR06MB4808B7481F7AECCD196675E1CC552DB7PR06MB4808eurp_
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+
+
+<div dir=3D"ltr">
+<div dir=3D"ltr"><br>
+</div>
+<div id=3D"ms-outlook-mobile-signature">
+<div><br>
+</div>Sendt fra <a href=3D"https://aka=2Ems/o0ukef">Outlook til iOS</a></di=
+v>
+</div>
+<hr style=3D"display:inline-block;width:98%" tabindex=3D"-1">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" st=
+yle=3D"font-size:11pt" color=3D"#000000"><b>Fra:</b> Praktikaftale Cphbusin=
+ess &lt;praktikaftale@cphbusiness=2Edk&gt;<br>
+<b>Sendt:</b> Friday, February 23, 2024 9:31:38 AM<br>
+<b>Til:</b>&nbsp;[=2E=2E=2E] &lt;[=2E=2E=2E]@cphbusiness=2Edk&gt;<br>
+<b>Emne:</b> Kvittering for din praktikevaluering // Reciept for your inter=
+nship evaluation</font>
+<div>&nbsp;</div>
+</div>
+<div>
+<p><span style=3D"font-family:arial">K=C3=A6re [=2E=2E=2E]</span><span styl=
+e=3D"font-family:arial"><br>
+<br>Tak for din evaluering af praktikopholdet hos </span><span style=3D"fon=
+t-family:arial">Hello Retail</span><span style=3D"font-family:arial">=2E<br=
+>
+<br>Din evaluering er vigtig for os, da den er med til at kvalitetssikre fr=
+emtidige praktikforl=C3=B8b=2E<br>
+<br>
+</span><span style=3D"font-family:arial"><em>Du skal bruge denne bekr=C3=A6f=
+telse, n=C3=A5r du skal afleverer din praktikrapport i Wiseflow=2E S=C3=B8r=
+g derfor for at gemme denne bekr=C3=A6ftelse som PDF, mail eller screen sho=
+t=2E<br>
+</em></span><span style=3D"font-family:arial"><br>I Wiseflow vil der v=C3=
+=A6re et afkrydsningsfelt, hvor du skal bekr=C3=A6fte, at du har uploadet d=
+enne bekr=C3=A6ftelse for praktikevaluering sammen med din praktikrapport=
+=2E<br>
+<br>
+</span><span style=3D"color:rgb(184,49,47)"><strong>Det er derfor vigtigt, =
+at du gemmer denne bekr=C3=A6ftelse for deltagelse i evalueringen=2E</stron=
+g></span><span style=3D"font-family:arial"><br>
+<br>Med venlig hilsen<br>
+</span><span style=3D"font-family:arial"><strong>Cphbusiness</strong></span=
+><span style=3D"font-family:arial"><br>
+<br>____________<br>=F0=9F=87=AC=F0=9F=87=A7<br>Dear [=2E=2E=2E]</span><spa=
+n style=3D"font-family:arial"><br>
+<br>Thank you for your evaluation of your internship at </span><span style=
+=3D"font-family:arial">Hello Retail</span><span style=3D"font-family:arial"=
+>=2E<br>
+<br>Your evaluation is important to us, as it helps to ensure the quality o=
+f future internships=2E<br>
+<br>
+</span><span style=3D"font-family:arial"><em>You will need this confirmatio=
+n when you submit your internship report in Wiseflow=2E Therefore ensure to=
+ save this confirmation as PDF, mail or screen shot=2E</em></span><span sty=
+le=3D"font-family:arial"><br>
+<br>In Wiseflow, there will be a check box where you need to confirm that y=
+ou have uploaded this internship evaluation confirmation along with your in=
+ternship report=2E<br>
+<br>
+</span><span style=3D"color:rgb(184,49,47)"><strong>It is therefore importa=
+nt that you save this confirmation of participation in the evaluation=2E<br=
+>
+</strong></span><span style=3D"font-family:arial"><br>Best regards<br>
+</span><span style=3D"font-family:arial"><strong>Cphbusiness</strong></span=
+><span style=3D"font-family:arial"><br>
+<br>
+<br>
+</span><span style=3D"font-family:arial">2024-02-23T08:31:38=2E0422829Z</sp=
+an><span style=3D"font-family:arial"> (id:</span><span style=3D"font-family=
+:arial">217202e7-db2d-ed11-9db1-000d3a228ce3</span><span style=3D"font-fami=
+ly:arial">)</span></p>
+</div>
+
+
+
+--_000_DB7PR06MB4808B7481F7AECCD196675E1CC552DB7PR06MB4808eurp_--
+

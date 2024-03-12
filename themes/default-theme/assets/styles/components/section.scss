@@ -1,0 +1,19 @@
+.section{
+    padding: 4rem 8rem;
+    &--hero{
+        background-color: var(--clr-gray);
+        padding: 8rem;
+    }
+    &__content{
+        max-width: 800px;
+        margin: auto;
+    }
+}
+@media screen and (max-width:600px) {
+    .section{
+        padding: 2rem;
+        &--hero{
+            padding: 4rem 2rem;
+        }
+    }
+}

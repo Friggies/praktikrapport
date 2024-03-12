@@ -1,0 +1,34 @@
+{{ define "main" }}
+<section class="section section--hero">
+  <div class="section__content">
+    <h1 id="title">
+      {{ .Title }}
+    </h1>
+    {{ if gt .Params.Kategorier 0}}
+      <p>Kategoriseret:
+        {{ range .Params.Kategorier }}
+          <a href="/kategorier/{{.}}">{{replace . "sogefunktion" "søgefunktion"}}</a>
+        {{ end }}
+      </p>
+    {{ end }}
+    {{ with .Params.Dato }}
+      <p>Dato: {{ . }}</p>
+    {{ end }}
+    {{ $readingTime := div .WordCount 200 }}
+    {{ if gt $readingTime 0 }}<p>Læsetid: {{ $readingTime }} min.</p>{{ end }}
+  </div>
+</section>
+<section class="section" aria-labelledby="title">
+  <div class="section__content">
+    {{ if (or (eq .Type "task") (eq .Type "page")) }}
+      <aside>
+        <details class="tableofcontents">
+          <summary class="tableofcontents__summary">Indholdsoversigt</summary>
+          {{ .TableOfContents }}
+        </details>
+      </aside>
+    {{ end }}
+    <article class="content">{{ .Content }}</article>
+  </div>
+</section>
+{{ end }}

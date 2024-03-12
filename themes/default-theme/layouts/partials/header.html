@@ -1,0 +1,15 @@
+<nav class="navigation">
+    <a href="#main" class="skip-link">Spring navigation over</a>
+    <ul class="navigation__list">
+        {{ $currentPage := . }}
+        {{ range site.Menus.main }}
+            <li>
+                <a 
+                    {{ if $currentPage.IsMenuCurrent .Menu . }}
+                        aria-current="page"
+                    {{ end }}
+                    href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+        {{ end }}
+    </ul>
+</nav>
