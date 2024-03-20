@@ -78,7 +78,7 @@ Ligeledes satte jeg også mine personlige udviklingsmål op efter studiets Dare-
 
 ### Virksomhedens plan
 
-Vi havde en medarbejder på afdelingen, som skulle på barsel d. 1/2, og virksomhedens plan med mig og de andre nye var, at vi skulle overtage en del af hans arbejde, imens han var på basel. Jeg skulle altså læres op i løbet af den først måned, så jeg selv kunne tage ansvar for diverse arbejdsopgaver fra starten af februar.
+Vi havde en medarbejder på afdelingen, som skulle på barsel d. 1/2, og virksomhedens plan med mig og de andre nye var, at vi skulle overtage en del af hans arbejde, imens han var på barsel. Jeg skulle altså læres op i løbet af den først måned, så jeg selv kunne tage ansvar for diverse arbejdsopgaver fra starten af februar.
 
 Det betød, at jeg skulle have diverse [introduktioner](/kategorier/introduktion) inden d. 1/2. Her fik jeg overordet styr på, hvordan de fleste løsninger var sat op, og hvordan man arbejder med dem. Jeg fik også lov til at arbejde på lidt forskellige kundeløsninger inden d. 1/2.
 
